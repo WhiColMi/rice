@@ -4,3 +4,18 @@
 [submodule "qutebrowser"]
 	path = qutebrowser
 	url = git@github.com:WhiColMi/qute-config.git
+[submodule "lf"]
+	path = lf
+	url = git@github.com:WhiColMi/lf-config.git
+[submodule "waybar"]
+	path = waybar
+	url = git@github.com:WhiColMi/waybar-config.git
+[submodule "rofi"]
+	path = rofi
+	url = git@github.com:WhiColMi/rofi-config.git
+[submodule "hypr"]
+	path = hypr
+	url = git@github.com:WhiColMi/hypr-config.git
+[submodule "alacritty"]
+	path = alacritty
+	url = git@github.com:WhiColMi/alacritty-conf.git
