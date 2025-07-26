@@ -19,3 +19,6 @@
 [submodule "alacritty"]
 	path = alacritty
 	url = git@github.com:WhiColMi/alacritty-conf.git
+[submodule "theming"]
+	path = theming
+	url = git@github.com:WhiColMi/theming-config.git
