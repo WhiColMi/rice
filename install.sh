@@ -3,11 +3,10 @@ set -euo pipefail
 
 echo "🛠️ Starting selective rice install..."
 
-if [[ ! -f ".rice_modules" ]]; then
-  echo "No .rice_modules file found! Create one listing submodules to install."
-  exit 1
-fi
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$ROOT_DIR/path-vars.sh"
 
+cd $M_DIR
 while read -r module; do
   [[ -z "$module" || "$module" =~ ^# ]] && continue  # skip empty lines and comments
   echo "⬇️ Initializing submodule $module..."
@@ -18,7 +17,8 @@ while read -r module; do
   else
     echo "⚠️ No install.sh found in $module"
   fi
-done < .rice_modules
+done < $M_PATH
+cd $TEMP_DIR
 
 echo "✅ Selective rice installation done."
 

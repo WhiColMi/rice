@@ -3,11 +3,10 @@ set -euo pipefail
 
 echo "🧹 Starting rice uninstall..."
 
-if [[ ! -f ".rice_modules" ]]; then
-  echo "No .rice_modules found. Nothing to uninstall?"
-  exit 0
-fi
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$ROOT_DIR/path-vars.sh"
 
+cd $ROOT_DIR
 while read -r module; do
   [[ -z "$module" || "$module" =~ ^# ]] && continue
   echo "🗑️ Uninstalling $module..."
@@ -17,7 +16,8 @@ while read -r module; do
   else
     echo "⚠️ No uninstall.sh found in $module, skipping."
   fi
-done < .rice_modules
+done < $M_PATH
+cd $TMP_DIR
 
 echo "🧹 Rice uninstall complete."
 
