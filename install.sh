@@ -6,7 +6,7 @@ echo "🛠️ Starting selective rice install..."
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$ROOT_DIR/path-vars.sh"
 
-cd $M_DIR
+cd $ROOT_DIR
 while read -r module; do
   [[ -z "$module" || "$module" =~ ^# ]] && continue  # skip empty lines and comments
   echo "⬇️ Initializing submodule $module..."

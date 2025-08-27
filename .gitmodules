@@ -22,3 +22,9 @@
 [submodule "theming"]
 	path = theming
 	url = git@github.com:WhiColMi/theming-config.git
+[submodule "ghostty"]
+	path = ghostty
+	url = git@github.com:WhiColMi/ghostty-config.git
+[submodule "yazi"]
+	path = yazi
+	url = git@github.com:WhiColMi/yazi-config.git
