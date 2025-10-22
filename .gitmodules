@@ -28,3 +28,6 @@
 [submodule "yazi"]
 	path = yazi
 	url = git@github.com:WhiColMi/yazi-config.git
+[submodule "tmux"]
+	path = tmux
+	url = git@github.com:WhiColMi/tmux-config.git
