@@ -31,3 +31,6 @@
 [submodule "tmux"]
 	path = tmux
 	url = git@github.com:WhiColMi/tmux-config.git
+[submodule "quickshell"]
+	path = quickshell
+	url = git@github.com:WhiColMi/quickshell-config.git
